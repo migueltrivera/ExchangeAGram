@@ -9,11 +9,14 @@
 /* Begin PBXBuildFile section */
 		4971DFF41B9EA9910007565E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4971DFF31B9EA9910007565E /* AppDelegate.swift */; };
 		4971DFF71B9EA9910007565E /* ExchangeAGram.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4971DFF51B9EA9910007565E /* ExchangeAGram.xcdatamodeld */; };
-		4971DFF91B9EA9910007565E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4971DFF81B9EA9910007565E /* ViewController.swift */; };
 		4971DFFC1B9EA9910007565E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4971DFFA1B9EA9910007565E /* Main.storyboard */; };
 		4971DFFE1B9EA9910007565E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4971DFFD1B9EA9910007565E /* Images.xcassets */; };
 		4971E0011B9EA9910007565E /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4971DFFF1B9EA9910007565E /* LaunchScreen.xib */; };
 		4971E00D1B9EA9910007565E /* ExchangeAGramTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4971E00C1B9EA9910007565E /* ExchangeAGramTests.swift */; };
+		4971E0171B9EC0870007565E /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4971E0161B9EC0870007565E /* FeedViewController.swift */; };
+		4971E01B1B9EC58A0007565E /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4971E01A1B9EC58A0007565E /* FeedCell.swift */; };
+		4971E01D1B9EC88B0007565E /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4971E01C1B9EC88B0007565E /* MobileCoreServices.framework */; };
+		4971E01F1B9ECB3B0007565E /* FeedItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4971E01E1B9ECB3B0007565E /* FeedItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,13 +34,16 @@
 		4971DFF21B9EA9910007565E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4971DFF31B9EA9910007565E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4971DFF61B9EA9910007565E /* ExchangeAGram.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ExchangeAGram.xcdatamodel; sourceTree = "<group>"; };
-		4971DFF81B9EA9910007565E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		4971DFFB1B9EA9910007565E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4971DFFD1B9EA9910007565E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		4971E0001B9EA9910007565E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		4971E0061B9EA9910007565E /* ExchangeAGramTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ExchangeAGramTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4971E00B1B9EA9910007565E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4971E00C1B9EA9910007565E /* ExchangeAGramTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeAGramTests.swift; sourceTree = "<group>"; };
+		4971E0161B9EC0870007565E /* FeedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FeedViewController.swift; path = ../FeedViewController.swift; sourceTree = "<group>"; };
+		4971E01A1B9EC58A0007565E /* FeedCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
+		4971E01C1B9EC88B0007565E /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		4971E01E1B9ECB3B0007565E /* FeedItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4971E01D1B9EC88B0007565E /* MobileCoreServices.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,8 +87,10 @@
 			isa = PBXGroup;
 			children = (
 				4971DFF31B9EA9910007565E /* AppDelegate.swift */,
-				4971DFF81B9EA9910007565E /* ViewController.swift */,
 				4971DFFA1B9EA9910007565E /* Main.storyboard */,
+				4971E0161B9EC0870007565E /* FeedViewController.swift */,
+				4971E01E1B9ECB3B0007565E /* FeedItem.swift */,
+				4971E01A1B9EC58A0007565E /* FeedCell.swift */,
 				4971DFFD1B9EA9910007565E /* Images.xcassets */,
 				4971DFFF1B9EA9910007565E /* LaunchScreen.xib */,
 				4971DFF51B9EA9910007565E /* ExchangeAGram.xcdatamodeld */,
@@ -93,6 +102,7 @@
 		4971DFF11B9EA9910007565E /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				4971E01C1B9EC88B0007565E /* MobileCoreServices.framework */,
 				4971DFF21B9EA9910007565E /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -215,8 +225,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4971DFF91B9EA9910007565E /* ViewController.swift in Sources */,
 				4971DFF41B9EA9910007565E /* AppDelegate.swift in Sources */,
+				4971E01B1B9EC58A0007565E /* FeedCell.swift in Sources */,
+				4971E0171B9EC0870007565E /* FeedViewController.swift in Sources */,
+				4971E01F1B9ECB3B0007565E /* FeedItem.swift in Sources */,
 				4971DFF71B9EA9910007565E /* ExchangeAGram.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
