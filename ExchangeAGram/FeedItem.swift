@@ -10,9 +10,8 @@ import Foundation
 import CoreData
 
 @objc (FeedItem)
-class FeedItem: NSManagedObject {
-
+class FeedItem: NSManagedObject
+{
     @NSManaged var image: NSData
     @NSManaged var caption: String
-
 }

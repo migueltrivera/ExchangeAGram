@@ -10,7 +10,7 @@ import UIKit
 import MobileCoreServices
 import CoreData
 
-class FeedViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate
+class FeedViewController: UIViewController, UICollectionViewDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate
 {
 
     @IBOutlet weak var collectionView: UICollectionView!
@@ -42,8 +42,10 @@ class FeedViewController: UIViewController, UICollectionViewDataSource, UICollec
     // Pass the selected object to the new view controller.
     }
     */
-    
+  
+  
     @IBAction func snapBarButtonItemTapped(sender: UIBarButtonItem) {
+
         if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.Camera) {
             var cameraController = UIImagePickerController()
             cameraController.delegate = self
@@ -73,7 +75,7 @@ class FeedViewController: UIViewController, UICollectionViewDataSource, UICollec
             self.presentViewController(alertController, animated: true, completion: nil)
         }
     }
-    
+
     //UIImagePickerControllerDelegate
     
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [NSObject : AnyObject]) {
@@ -90,7 +92,6 @@ class FeedViewController: UIViewController, UICollectionViewDataSource, UICollec
         (UIApplication.sharedApplication().delegate as AppDelegate).saveContext()
         
         feedArray.append(feedItem)
-        
         self.dismissViewControllerAnimated(true, completion: nil)
         
         self.collectionView.reloadData()
@@ -119,5 +120,4 @@ class FeedViewController: UIViewController, UICollectionViewDataSource, UICollec
         
         return cell
     }
-
 }
